@@ -1,60 +1,58 @@
 {{define "body"}}
 <div id="flipkart-navbar">
-
-    <div class="topbar">
-        <div class="container">
-            <div class="row row1">
-            {{template "menu" .}}
-            </div>
-        </div>
-    </div><!-- .topbar -->
-
+  <div class="topbar">
     <div class="container">
-        <div class="row row2">
+      <div class="row row1">{{template "menu" .}}</div>
+    </div>
+  </div>
+  <!-- .topbar -->
 
-            <div class="col-sm-2">
-            {{template "logo" .}}
-            </div>
+  <div class="container">
+    <div class="row row2">
+      <div class="col-sm-2">{{template "logo" .}}</div>
 
-        {{template "searchbar"}}
-
-        </div><!-- .row.row2 -->
-    </div><!-- .container -->
-</div><!-- #flipkart-navbar -->
+      {{template "searchbar"}}
+    </div>
+    <!-- .row.row2 -->
+  </div>
+  <!-- .container -->
+</div>
+<!-- #flipkart-navbar -->
 
 <div class="container">
-    <div class="row text-center">
-        <h1 style="margin-top:40px">
-            <strong>teyit.link</strong> web’de zamanı durdurur.
-        </h1>
+  <div class="row text-center">
+    <h1 style="margin-top:40px">
+      <strong>teyit.link</strong> web’de zamanı durdurur.
+    </h1>
 
-        <p class="lead">
-            teyit.link internet sayfalarının kopyasını alarak; çevirimiçi görüntüleyebileceğiniz sekilde kaydeder. <br/>
-            Böylece sayfalar silinmiş olsa bile erişmeye devam edebilirsiniz.
-        </p>
+    <p class="lead">
+      teyit.link internet sayfalarının kopyasını alarak; çevirimiçi
+      görüntüleyebileceğiniz sekilde kaydeder. <br />
+      Böylece sayfalar silinmiş olsa bile erişmeye devam edebilirsiniz.
+    </p>
 
-        <div class="clearfix">
-            <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 30px">
-                <div id="tl-archive-input">Yükleniyor...</div>
-            </div>
-        </div>
-
+    <div class="clearfix">
+      <div class="col-xs-12" style="margin-top: 10px; margin-bottom: 30px">
+        <div id="tl-archive-input">Yükleniyor...</div>
+      </div>
     </div>
+  </div>
 
-    <hr>
+  <hr />
 
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            <p>
-                teyit.org internette yer alan şüpheli bilgileri tarayan, seçen, araştıran ve analiz haline getirerek
-                okura sunan bir doğrulama platformudur.
-            </p>
-            <p>
-                teyit.link bir teyit.org aracıdır.
-            </p>
-        </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p>
+        teyit.org internette yer alan şüpheli bilgileri tarayan, seçen,
+        araştıran ve analiz haline getirerek okura sunan bir doğrulama
+        platformudur.
+      </p>
+      <p>teyit.link bir teyit.org aracıdır.</p>
     </div>
+  </div>
 </div>
-<script>window["TL_DATA"]["RENDER_ARCHIVE_INPUT"] = true;</script>
+<script>
+  window["TL_DATA"]["RENDER_ARCHIVE_INPUT"] = true;
+</script>
 
-{{end}}
+{{ end }}

@@ -5,11 +5,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/satori/go.uuid"
-	"github.com/noddigital/teyit.link/utils"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/noddigital/teyit.link/utils"
+	uuid "github.com/satori/go.uuid"
 )
 
 //go:generate goqueryset -in archive.go
@@ -170,8 +171,8 @@ func FindArchives(params ArchiveSearchParams) ([]Archive, int, error) {
 
 	if params.Query != "" {
 		query := fmt.Sprintf("%%%s%%", params.Query)
-		db = db.Where("request_url LIKE ?", query)
-		db = db.Or("meta_title LIKE ?", query).Or("meta_description LIKE ?", query)
+		// db = db.Where("request_url LIKE ?", query)
+		db = db.Where("meta_title LIKE ? OR meta_description LIKE ? OR request_url LIKE ?", query, query, query)
 	}
 
 	if params.RequestUrl != "" {
